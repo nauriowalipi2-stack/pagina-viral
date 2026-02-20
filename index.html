@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carregando conteúdo...</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-size: 16px;
+        }
+        .info {
+            text-align: center;
+            opacity: 0.8;
+        }
+        .info small {
+            font-size: 12px;
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="info">
+        🔄 Redirecionando...<br>
+        <small>Aguarde um instante</small>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 1. SCRIPT POPADS (GERADOR DE RECEITA)         -->
+    <!-- COLE AQUI O CÓDIGO QUE VOCÊ COPIOU DO POPADS  -->
+    <!-- ============================================== -->
+    <script>
+        // EXEMPLO - SUBSTITUA PELO SEU CÓDIGO REAL DO POPADS
+        // O código do PopAds geralmente começa com <!-- PopAds.net Popunder Code -->
+        // e contém várias linhas de JavaScript
+        
+        /* SEU CÓDIGO DO POPADS DEVE FICAR AQUI */
+        
+        // Exemplo de como o código PopAds se parece (NÃO USE ESTE EXEMPLO, É SÓ ILUSTRATIVO):
+        /*
+        <!-- PopAds.net Popunder Code for meusite.com -->
+        <script type="text/javascript" data-cfasync="false">
+        (function(){ var f=window;f["_pop"]=[["siteId",123456],["minBid",0],["popundersPerIP",1],["delayBetween",0],["default",false],["defaultPerDay",0],["topmostLayer",false]]; var y=["//c1.popads.net/pop.js","//c2.popads.net/pop.js"]; ... })();
+        </script>
+        */
+    </script>
+
+    <!-- ============================================== -->
+    <!-- 2. REDIRECIONADOR ALEATÓRIO (CONTEÚDO VIRAL)  -->
+    <!-- ============================================== -->
+    <script>
+        // LISTA DE URLs VIRAIS (VOCÊ PODE EDITAR À VONTADE)
+        const urlsVirais = [
+            "https://twitter.com/elonmusk/status/1755550844951974230",
+            "https://twitter.com/NASA/status/1756660844951974231",
+            "https://x.com/neymarjr/status/1758880844951974233",
+            "https://twitter.com/espn/status/1757770844951974232",
+            "https://x.com/BillGates/status/1759990844951974234"
+        ];
+
+        // ESCOLHE UMA URL ALEATÓRIA DA LISTA
+        const urlDestino = urlsVirais[Math.floor(Math.random() * urlsVirais.length)];
+        
+        // MOSTRA NO CONSOLE QUAL URL FOI ESCOLHIDA (OPCIONAL)
+        console.log("Redirecionando para: " + urlDestino);
+    </script>
+
+    <!-- ============================================== -->
+    <!-- 3. SISTEMA DE COOKIE (RASTREAR VISITANTES)    -->
+    <!-- ============================================== -->
+    <script>
+        // FUNÇÃO PARA CRIAR COOKIE
+        function setCookie(name, value, days) {
+            let expires = "";
+            if (days) {
+                const date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + (value || "") + expires + "; path=/";
+        }
+
+        // FUNÇÃO PARA LER COOKIE
+        function getCookie(name) {
+            const nameEQ = name + "=";
+            const ca = document.cookie.split(';');
+            for (let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
+
+        // VERIFICA SE O VISITANTE JÁ TEM COOKIE
+        if (!getCookie('visitante_id')) {
+            // SE NÃO TEM, CRIA UM ID ÚNICO
+            const visitanteId = 'VISITANTE_' + Math.random().toString(36).substr(2, 9);
+            setCookie('visitante_id', visitanteId, 30); // GUARDA POR 30 DIAS
+            console.log('Novo visitante registrado: ' + visitanteId);
+        } else {
+            console.log('Visitante recorrente: ' + getCookie('visitante_id'));
+        }
+    </script>
+
+    <!-- ============================================== -->
+    <!-- 4. ATRASO E REDIRECIONAMENTO (0.3 SEGUNDOS)   -->
+    <!-- ============================================== -->
+    <script>
+        // AGUARDA 300ms (0.3 SEGUNDOS) PARA O POP-UNDER ABRIR
+        setTimeout(function() {
+            window.location.href = urlDestino; // REDIRECIONA PARA O CONTEÚDO VIRAL
+        }, 300);
+    </script>
+
+    <!-- ============================================== -->
+    <!-- 5. SISTEMA DE SUB-AFILIADOS (INVISÍVEL)       -->
+    <!-- ESPAÇO RESERVADO PARA FUTURA EXPANSÃO         -->
+    <!-- ============================================== -->
+    <div style="display: none;" id="sistema-afiliados">
+        <!-- AQUI FUTURAMENTE VOCÊ PODE COLOCAR:
+             - IFRAME PARA SISTEMA DE URL CURTA
+             - SCRIPT DE RASTREAMENTO DE AFILIADOS
+             - ETC.
+        -->
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 6. FALLBACK PARA QUEM TEM JS DESABILITADO     -->
+    <!-- ============================================== -->
+    <noscript>
+        <div style="text-align: center; padding: 20px;">
+            Seu navegador não suporta JavaScript ou está desabilitado.<br>
+            <a href="https://twitter.com">Clique aqui para continuar</a>.
+        </div>
+    </noscript>
+</body>
+</html>
